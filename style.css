@@ -1,0 +1,302 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(34, 41, 51);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Anybody', cursive;
+    font-family: 'Comfortaa', cursive;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-family: 'M PLUS 1', sans-serif;
+    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+/* MAIN */
+
+.container-main {
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo {
+    text-align: center;
+}
+
+.xmark {
+    color: rgb(41, 196, 157);
+    font-size: 40px;
+}
+.circle { 
+    color: rgb(243, 200, 59);
+    font-size: 40px;
+}
+
+.player {
+    background-color: rgb(46, 56, 70);
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    box-shadow: 0px 8px 0px -1px rgb(22, 32, 32);
+    -webkit-box-shadow: 0px 8px 0px -1px rgb(22, 32, 32);
+    -moz-box-shadow: 0px 8px 0px -1px rgb(22, 32, 32);
+    margin-bottom: 30px;
+}
+
+.p-player {
+    color: rgb(201, 195, 195);
+    padding: 17px 0;
+}
+
+.pick-player {
+    background-color: rgb(34, 41, 51);
+    border-radius: 15px;
+    display: flex;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.player-x, .player-circle {
+    padding: 5px 30px;
+    color: rgb(201, 195, 195);
+    border-radius: 15px;
+    font-size: 40px;
+}
+
+.selected {
+    color: rgb(34, 41, 51);
+    background-color: rgb(201, 195, 195);
+}
+
+.p-player2 {
+    color: rgb(94, 105, 105);
+    padding: 17px 0;
+}
+
+.game-cpu, .game-player {
+    margin-bottom: 15px;
+    padding: 10px 0;
+    border-style: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.game-cpu {
+    background-color: rgb(243, 200, 59);
+    box-shadow: 0px 6px 0px 0px rgba(166,150,15,1);
+-webkit-box-shadow: 0px 6px 0px 0px rgba(166,150,15,1);
+-moz-box-shadow: 0px 6px 0px 0px rgba(166,150,15,1);
+}
+
+.game-player {
+    background-color: rgb(41, 196, 157);
+    box-shadow: 0px 6px 0px 0px rgba(31,135,109,1);
+-webkit-box-shadow: 0px 6px 0px 0px rgba(31,135,109,1);
+-moz-box-shadow: 0px 6px 0px 0px rgba(31,135,109,1);
+}
+
+
+/* FIN DEL MAIN */
+
+
+/* TABLERO */
+
+
+
+.tablero {
+    display: none;
+    width: 300px;
+    flex-direction: column;
+}
+
+.tablero-header {
+    display: flex;
+}
+
+.turn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0px;
+    padding-right: 12px;
+    background-color: rgb(46, 56, 70);
+    border-radius: 5px;
+    box-shadow: 0px 4px 0px 0px rgba(22,32,32,0.75);
+-webkit-box-shadow: 0px 4px 0px 0px rgba(22,32,32,0.75);
+-moz-box-shadow: 0px 4px 0px 0px rgba(22,32,32,0.75);
+    margin: auto;
+}
+
+.mark-turn, .p-turn {
+    color: rgb(201, 195, 195);
+    padding-left: 12px;
+}
+
+.mark-turn {
+    font-size: 20px;
+}
+
+.restart {
+    background-color: rgb(201, 195, 195);
+    border-style: none;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 0px 0px rgba(110,124,124,0.75);
+-webkit-box-shadow: 0px 3px 0px 0px rgba(110,124,124,0.75);
+-moz-box-shadow: 0px 3px 0px 0px rgba(110,124,124,0.75);
+    cursor: pointer;
+    margin: 0 0 0 auto;
+}
+
+.tablero-main {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-container {
+    display: flex;
+}
+
+.box {
+    background-color: rgb(46, 56, 70);
+    width: 90px;
+    height: 80px;
+    margin: 7px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 0px 0px rgba(22,32,32,0.75);
+-webkit-box-shadow: 0px 4px 0px 0px rgba(22,32,32,0.75);
+-moz-box-shadow: 0px 4px 0px 0px rgba(22,32,32,0.75);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+}
+
+.contadores {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contador {
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.wins {
+    background-color: rgb(41, 196, 157);
+}
+.ties {
+    background-color: rgb(201, 195, 195);
+}
+.loses {
+    background-color: rgb(243, 200, 59);
+}
+
+/* FIN DEL TABLERO */
+
+/* MODALES */
+
+.modal-x-back, .modal-O-back, .modal-tie-back, .modal-restart-back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgb(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-x, .modal-O, .modal-tie, .modal-restart {
+    width: 100%;
+    height: 200px;
+    background-color: rgb(46, 56, 70);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-x-p, .modal-O-p, .modal-tie-p, .modal-restart-p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(41, 196, 157);
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.p-modal-tie, .modal-restart-p {
+    color: rgb(201, 195, 195);
+}
+
+.modal-O-p {
+    color: rgb(243, 200, 59);
+}
+
+.p-modal-x, .p-modal-O {
+    padding-left: 10px;
+}
+
+.quit1, .next1, .quit2, .next2, .quit3, .next3, .cancel, .restart2 {
+    border: none;
+    border-style: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.quit1, .quit2, .quit3, .cancel {
+    background-color: rgb(201, 195, 195);
+    box-shadow: 0px 3px 0px 0px rgba(110,124,124,0.75);
+-webkit-box-shadow: 0px 3px 0px 0px rgba(110,124,124,0.75);
+-moz-box-shadow: 0px 3px 0px 0px rgba(110,124,124,0.75);
+cursor: pointer;
+}
+
+.next1, .next2, .next3, .restart2{
+    background-color: rgb(243, 200, 59);
+    margin-left: 15px;
+    box-shadow: 0px 3px 0px 0px rgb(124, 126, 15);
+-webkit-box-shadow: 0px 3px 0px 0px rgb(124, 126, 15);
+-moz-box-shadow: 0px 3px 0px 0px rgb(124, 126, 15);
+cursor: pointer;
+}
+
+
+
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: flex;
+}
+
+
+
